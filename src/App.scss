@@ -1,0 +1,79 @@
+$greenish: #7FE6CA;
+
+.App {
+  text-align: center;
+  .App-logo {
+    height: 80px;
+
+    animation: App-logo-spin infinite 20s linear;
+  }
+  .App-header {
+    height: 150px;
+    padding: 20px;
+
+    color: white;
+    background-color: #222;
+    h2 {
+      font-weight: 100;
+
+      letter-spacing: 0.5em;
+      text-transform: uppercase;
+    }
+  }
+  .AddNoteForm, .Note {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 1em;
+    input,
+    textarea,
+    button,
+    p,
+    h2 {
+      font-size: large;
+
+      box-sizing: border-box;
+      width: 100%;
+      margin: 0.1em 0;
+      padding: 0.3em;
+
+      border: none;
+      outline: none;
+      background: #edff75;
+    }
+    textarea {
+      overflow: auto;
+
+      resize: vertical;
+    }
+    button {
+      cursor: pointer;
+      text-align: left;
+      background: $greenish;
+    }
+  }
+  ul {
+    padding: 0;
+    margin: 0;
+    .Note {
+      padding: 0.3em 1em;
+      text-align: left;
+      font-size: 0.6em;
+      p {
+        font-size: 1.5em;
+      }
+    }
+    .Note p:first-child {
+      font-size: 1.3em;
+      background: orange;
+      font-weight: bold;
+    }
+  }
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}

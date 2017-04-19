@@ -1,0 +1,72 @@
+.App {
+  text-align: center; }
+
+.App .App-logo {
+  height: 80px;
+  animation: App-logo-spin infinite 20s linear; }
+
+.App .App-header {
+  height: 150px;
+  padding: 20px;
+  color: white;
+  background-color: #222; }
+
+.App .App-header h2 {
+  font-weight: 100;
+  letter-spacing: 0.5em;
+  text-transform: uppercase; }
+
+.App .AddNoteForm, .App .Note {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1em; }
+
+.App .AddNoteForm input,
+.App .AddNoteForm textarea,
+.App .AddNoteForm button,
+.App .AddNoteForm p,
+.App .AddNoteForm h2, .App .Note input,
+.App .Note textarea,
+.App .Note button,
+.App .Note p,
+.App .Note h2 {
+  font-size: large;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0.1em 0;
+  padding: 0.3em;
+  border: none;
+  outline: none;
+  background: #edff75; }
+
+.App .AddNoteForm textarea, .App .Note textarea {
+  overflow: auto;
+  resize: vertical; }
+
+.App .AddNoteForm button, .App .Note button {
+  cursor: pointer;
+  text-align: left;
+  background: #7FE6CA; }
+
+.App ul {
+  padding: 0;
+  margin: 0; }
+
+.App ul .Note {
+  padding: 0.3em 1em;
+  text-align: left;
+  font-size: 0.6em; }
+
+.App ul .Note p {
+  font-size: 1.5em; }
+
+.App ul .Note p:first-child {
+  font-size: 1.3em;
+  background: orange;
+  font-weight: bold; }
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
