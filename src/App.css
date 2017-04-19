@@ -18,7 +18,7 @@
 
 .App .AddNoteForm,
 .App .NoteList {
-  max-width: 600px;
+  max-width: 768px;
   margin: 0 auto;
   padding: 1em 0.2em; }
 
@@ -65,7 +65,6 @@
 .App .NoteList p {
   font-size: 0.8em;
   font-weight: bold;
-  margin: 0.5em 0;
   width: 100%;
   background: orange; }
 
@@ -81,7 +80,7 @@
   background: white; }
 
 .App .title {
-  font-style: bold; }
+  padding: 0; }
 
 @keyframes App-logo-spin {
   from {
