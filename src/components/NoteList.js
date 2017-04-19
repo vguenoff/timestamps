@@ -27,7 +27,8 @@ class NoteList extends Component {
           onClick={() => this.props.removeNote(key)}
         >X</button>
         <p>{note.timestamp}</p>
-        <input
+        <Textarea 
+          className="title"
           name="title"
           value={note.title}
           onChange={e => this.handleChange(e, key)}

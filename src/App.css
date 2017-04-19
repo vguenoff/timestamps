@@ -24,12 +24,10 @@
 
 .App .AddNoteForm input,
 .App .AddNoteForm textarea,
-.App .AddNoteForm textarea,
 .App .AddNoteForm button,
 .App .AddNoteForm p,
 .App .AddNoteForm h2,
 .App .NoteList input,
-.App .NoteList textarea,
 .App .NoteList textarea,
 .App .NoteList button,
 .App .NoteList p,
@@ -38,10 +36,10 @@
   box-sizing: border-box;
   width: 100%;
   padding: 0.3em;
+  text-align: left;
   border: none;
   outline: none;
-  background: #edff75;
-  text-align: left; }
+  background: #edff75; }
 
 .App .AddNoteForm textarea,
 .App .NoteList textarea {
@@ -65,15 +63,25 @@
   padding: 0 0.2em; }
 
 .App .NoteList p {
-  font-size: 1em;
+  font-size: 0.8em;
   font-weight: bold;
-  width: 93%;
+  margin: 0.5em 0;
+  width: 100%;
   background: orange; }
 
 .App .NoteList button {
+  position: relative;
+  top: -10px;
+  left: 5px;
+  float: right;
+  width: 40px;
+  height: 40px;
   text-align: center;
-  width: 5%;
-  float: right; }
+  border-radius: 50%;
+  background: white; }
+
+.App .title {
+  font-style: bold; }
 
 @keyframes App-logo-spin {
   from {

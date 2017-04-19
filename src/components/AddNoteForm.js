@@ -22,7 +22,7 @@ class AddNoteForm extends Component {
   render() {
     return (
       <form ref={input => this.noteForm = input} className="AddNoteForm" onSubmit={this.createNote}>
-        <input ref={input => this.title = input} type="text" placeholder="Title" required />
+        <input ref={input => this.title = input} className="title" type="text" placeholder="Title" required />
         <Textarea ref={input => this.content = input} type="text" placeholder="Take a note..." required />
         <button>Add +</button>
       </form>
