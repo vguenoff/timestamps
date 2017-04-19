@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Textarea from 'react-textarea-autosize';
 
 class AddNoteForm extends Component {
   constructor() {
@@ -22,7 +23,7 @@ class AddNoteForm extends Component {
     return (
       <form ref={input => this.noteForm = input} className="AddNoteForm" onSubmit={this.createNote}>
         <input ref={input => this.title = input} type="text" placeholder="Title" required />
-        <textarea ref={input => this.content = input} type="text" placeholder="Take a note..." required />
+        <Textarea ref={input => this.content = input} type="text" placeholder="Take a note..." required />
         <button>Add +</button>
       </form>
     );

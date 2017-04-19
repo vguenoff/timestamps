@@ -16,54 +16,64 @@
   letter-spacing: 0.5em;
   text-transform: uppercase; }
 
-.App .AddNoteForm, .App .Note {
+.App .AddNoteForm,
+.App .NoteList {
   max-width: 600px;
   margin: 0 auto;
-  padding: 1em; }
+  padding: 1em 0.2em; }
 
 .App .AddNoteForm input,
 .App .AddNoteForm textarea,
+.App .AddNoteForm textarea,
 .App .AddNoteForm button,
 .App .AddNoteForm p,
-.App .AddNoteForm h2, .App .Note input,
-.App .Note textarea,
-.App .Note button,
-.App .Note p,
-.App .Note h2 {
+.App .AddNoteForm h2,
+.App .NoteList input,
+.App .NoteList textarea,
+.App .NoteList textarea,
+.App .NoteList button,
+.App .NoteList p,
+.App .NoteList h2 {
   font-size: large;
   box-sizing: border-box;
   width: 100%;
-  margin: 0.1em 0;
   padding: 0.3em;
   border: none;
   outline: none;
-  background: #edff75; }
+  background: #edff75;
+  text-align: left; }
 
-.App .AddNoteForm textarea, .App .Note textarea {
+.App .AddNoteForm textarea,
+.App .NoteList textarea {
   overflow: auto;
   resize: vertical; }
 
-.App .AddNoteForm button, .App .Note button {
+.App .AddNoteForm button,
+.App .NoteList button {
   cursor: pointer;
-  text-align: left;
-  background: #7FE6CA; }
+  background: #7fe6ca; }
 
-.App ul {
-  padding: 0;
-  margin: 0; }
-
-.App ul .Note {
-  padding: 0.3em 1em;
-  text-align: left;
-  font-size: 0.6em; }
-
-.App ul .Note p {
+.App .AddNoteForm p,
+.App .NoteList p {
   font-size: 1.5em; }
 
-.App ul .Note p:first-child {
-  font-size: 1.3em;
-  background: orange;
-  font-weight: bold; }
+.App .AddNoteForm form,
+.App .NoteList form {
+  padding: 0; }
+
+.App .NoteList {
+  padding: 0 0.2em; }
+
+.App .NoteList p {
+  font-size: 1em;
+  font-weight: bold;
+  width: 93%;
+  background: orange; }
+
+.App .NoteList button {
+  text-align: center;
+  width: 5%;
+  float: right; }
 
 @keyframes App-logo-spin {
   from {

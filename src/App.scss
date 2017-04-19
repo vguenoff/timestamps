@@ -1,4 +1,4 @@
-$greenish: #7FE6CA;
+$greenish: #7fe6ca;
 
 .App {
   text-align: center;
@@ -20,11 +20,14 @@ $greenish: #7FE6CA;
       text-transform: uppercase;
     }
   }
-  .AddNoteForm, .Note {
+
+  .AddNoteForm,
+  .NoteList {
     max-width: 600px;
     margin: 0 auto;
-    padding: 1em;
+    padding: 1em 0.2em;
     input,
+    textarea,
     textarea,
     button,
     p,
@@ -33,12 +36,12 @@ $greenish: #7FE6CA;
 
       box-sizing: border-box;
       width: 100%;
-      margin: 0.1em 0;
       padding: 0.3em;
 
       border: none;
       outline: none;
       background: #edff75;
+      text-align: left;
     }
     textarea {
       overflow: auto;
@@ -47,26 +50,29 @@ $greenish: #7FE6CA;
     }
     button {
       cursor: pointer;
-      text-align: left;
+
       background: $greenish;
     }
+    p {
+      font-size: 1.5em;
+    }
+    form {
+      padding: 0;
+    }
   }
-  ul {
-    padding: 0;
-    margin: 0;
-    .Note {
-      padding: 0.3em 1em;
-      text-align: left;
-      font-size: 0.6em;
-      p {
-        font-size: 1.5em;
-      }
-    }
-    .Note p:first-child {
-      font-size: 1.3em;
-      background: orange;
-      font-weight: bold;
-    }
+  .NoteList {
+    padding: 0 0.2em;
+  }
+  .NoteList p {
+    font-size: 1em;
+    font-weight: bold;
+    width: 93%;
+    background: orange;
+  }
+  .NoteList button {
+    text-align: center;
+    width: 5%;
+    float: right;
   }
   @keyframes App-logo-spin {
     from {
@@ -77,3 +83,4 @@ $greenish: #7FE6CA;
     }
   }
 }
+

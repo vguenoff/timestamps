@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import logo from '../logo.svg';
 
@@ -8,5 +9,9 @@ const Header = props => (
     <h2>{props.title}</h2>
   </div>
 );
+
+Header.propTypes = {
+  title: PropTypes.string,
+};
 
 export default Header;

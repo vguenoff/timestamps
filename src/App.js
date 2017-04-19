@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
+
 import Header from './components/Header';
 import AddNoteForm from './components/AddNoteForm';
-import Note from './components/Note';
+import NoteList from './components/NoteList';
 
 import './App.css';
 
@@ -43,21 +44,13 @@ class App extends Component {
       <div className="App">
         <Header title="Timestamps" />
         <AddNoteForm addNote={this.addNote} />
-        <ul className="list-of-notes">
-          {Object
-            .keys(this.state.notes)
-            .map(key => <Note
-              key={key}
-              index={key}
-              notes={this.state.notes}
-              details={this.state.notes[key]}
-              removeNote={this.removeNote}
-              updateNote={this.updateNote}
-            />)}
-        </ul>
+        <NoteList
+          notes={this.state.notes}
+          updateNote={this.updateNote}
+          removeNote={this.removeNote}
+        />
       </div>
     );
   }
 }
-
 export default App;
