@@ -39,6 +39,7 @@ html {
 .App .NoteList button,
 .App .NoteList p,
 .App .NoteList h2 {
+  font-size: 16px;
   box-sizing: border-box;
   width: 100%;
   padding: 0.3em;
