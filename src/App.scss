@@ -1,6 +1,9 @@
 $greenish: #7fe6ca;
-
+html {
+  font-size: 20px;
+}
 .App {
+  font-size: 1.5rem;
   text-align: center;
   .App-logo {
     height: 80px;
@@ -20,6 +23,11 @@ $greenish: #7fe6ca;
       text-transform: uppercase;
     }
   }
+  .AddNoteForm {
+    input {
+      margin-bottom: 0.1em;
+    }
+  }
   .AddNoteForm,
   .NoteList {
     max-width: 768px;
@@ -30,7 +38,7 @@ $greenish: #7fe6ca;
     button,
     p,
     h2 {
-      font-size: large;
+      // font-size: large;
 
       box-sizing: border-box;
       width: 100%;
@@ -44,16 +52,16 @@ $greenish: #7fe6ca;
     }
     textarea {
       overflow: auto;
-
       resize: vertical;
+    }
+    .title {
+      font-size: 1.2em;
+      padding-left: 0.25em;
     }
     button {
       cursor: pointer;
 
       background: $greenish;
-    }
-    p {
-      font-size: 1.5em;
     }
     form {
       padding: 0;
@@ -67,6 +75,7 @@ $greenish: #7fe6ca;
     font-weight: bold;
 
     width: 100%;
+    margin: 1em 0 0 0;
 
     background: orange;
   }

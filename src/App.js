@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import confirm from './components/confirm';
 
+import sampleNote from './components/sampleNote';
 import Header from './components/Header';
 import AddNoteForm from './components/AddNoteForm';
 import NoteList from './components/NoteList';
@@ -15,8 +17,23 @@ class App extends Component {
     this.updateNote = this.updateNote.bind(this);
     // state
     this.state = {
-      notes: {}
+      notes: sampleNote
     };
+  }
+  componentWillMount() {
+    // check if there is any order in localStorage
+    const localStorageRef = localStorage.getItem('storage');
+    console.log(localStorageRef);
+    if (localStorageRef) {
+      // update our App component's order state
+      this.setState({
+        notes: JSON.parse(localStorageRef)
+      });
+    }
+  }
+  componentWillUpdate(nextProps, nextState) {
+    // only strings can be passed into the localStorage
+    localStorage.setItem('storage', JSON.stringify(nextState.notes));
   }
   // method passed as props on AddNoteForm
   addNote(note) {
@@ -34,10 +51,16 @@ class App extends Component {
     notes[key] = updatedNote;
     this.setState({ notes });
   }
-  removeNote(note) {
-    const notes = { ...this.state.notes };
-    delete notes[note];
-    this.setState({ notes });
+  removeNote(event, note) {
+    event.preventDefault();
+    confirm('You\'re about to permanently delete this note. Are you sure?').then(() => {
+      const notes = { ...this.state.notes };
+      delete notes[note];
+      this.setState({ notes });
+      console.log('proceed!');
+    }, () => {
+      console.log('cancel!');
+    });
   }
   render() {
     return (

@@ -10,7 +10,6 @@ class NoteList extends Component {
     this.renderNotes = this.renderNotes.bind(this);
   }
   handleChange(e, key) {
-    event.preventDefault();
     const note = this.props.notes[key];
     // take a copy of that note and update it with the new data
     const updatedNote = {
@@ -24,10 +23,10 @@ class NoteList extends Component {
     return (
       <form className="NoteList" key={key}>
         <button
-          onClick={() => this.props.removeNote(key)}
+          onClick={e => this.props.removeNote(e, key)}
         >X</button>
         <p>{note.timestamp}</p>
-        <Textarea 
+        <Textarea
           className="title"
           name="title"
           value={note.title}
@@ -44,7 +43,7 @@ class NoteList extends Component {
   render() {
     return (
       <div className="NoteList">
-        {Object.keys(this.props.notes).map(this.renderNotes)}
+        {Object.keys(this.props.notes).map(this.renderNotes).reverse()}
       </div>
     );
   }
