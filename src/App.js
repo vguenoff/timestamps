@@ -23,7 +23,6 @@ class App extends Component {
   componentWillMount() {
     // check if there is any order in localStorage
     const localStorageRef = localStorage.getItem('storage');
-    console.log(localStorageRef);
     if (localStorageRef) {
       // update our App component's order state
       this.setState({
